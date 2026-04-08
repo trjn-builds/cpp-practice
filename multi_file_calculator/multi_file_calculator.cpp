@@ -1,12 +1,8 @@
+#include "operators.h"
+#include "get_integer.h"
 #include <iostream>
 #include <cstdio>
 
-//Declaring functions used
-int getInteger();
-int add(int x, int y);
-int subtract(int x, int y);
-int multiply(int x, int y);
-int divide(int x, int y);
 
 int main()
 {
@@ -24,7 +20,7 @@ int main()
 
     std::cout << "=========================================================\n";
 
-    //Stops terminal for closing instantly
+    //Stops terminal from closing instantly
     std::cout << "Enter any key to exit...\n";
     std::getchar();
     char character{};
