@@ -1,22 +1,21 @@
 #include <iostream>
-#include <cstdio>
-int main() {
-    long version = __cplusplus;
 
-    std::cout << "__cplusplus = " << version << "\n";
+bool isEven(int x)
+{
+    // if x % 2 == 0, 2 divides evenly into our number, which means it must be an even number
+    return !(x % 2);
+}
 
-    if (version >= 202302)
-        std::cout << "C++23 or newer\n";
-    else if (version >= 202002)
-        std::cout << "C++20\n";
-    else if (version >= 201703)
-        std::cout << "C++17\n";
-    else if (version >= 201402)
-        std::cout << "C++14\n";
-    else if (version >= 201103)
-        std::cout << "C++11\n";
+int main()
+{
+    std::cout << "Enter an integer: ";
+    int x{};
+    std::cin >> x;
+
+    if (isEven(x))
+        std::cout << x << " is even\n";
     else
-        std::cout << "Pre-C++11\n";
+        std::cout << x << " is odd\n";
 
-    std::cout << "NEW BUILD\n";
+    return 0;
 }
